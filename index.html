@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>greatest numbers</title>
+    </head>
+    <body>
+        <h1>greatest numbers</h1>
+        <label>enter the 1st number</label>
+        <input type="number" id="num1"><br><br>
+
+        <label>enter the 2nd number</label>
+        <input type="number" id="num2"><br><br>
+
+        <label>enter the 3rd number</label>
+        <input type="number" id="num3"><br><br>
+
+        <button onclick="findGreatest()">find greatest</button>
+
+        <p id="result"></p>
+
+        <script>
+            function findGreatest()
+            {
+                let n1=parseFloat(document.getElementById("num1").value);
+                let n2=parseFloat(document.getElementById("num2").value);
+                let n3=parseFloat(document.getElementById("num3").value);
+
+
+                let greatest;
+                if(n1>=n2 && n1>=n3)
+                {
+                    greatest=n1;
+                }
+                else if(n2>=n3)
+                {
+                    greatest=n2;
+                }
+                else{
+                    greatest=n3;
+                }
+                document.getElementById("result").innerHTML="greatest number is <b>"+greatest+"</b>";
+                alert("greatest number is :" +greatest);
+                console.log("greatest number is ",greatest);
+            }
+        </script>
+    </body>
+</html>
